@@ -199,7 +199,7 @@
 			},
 			"INPUT": function() {
 				var type = w.dom(element).type();
-				if (_w.contains(["text", "password"], type)) {
+				if (_w.contains(["text", "password", "number", "date"], type)) {
 					return w.dom(element).val();
 				}
 				if (_w.contains(["checkbox", "radio"], type)) {
@@ -258,7 +258,7 @@
 			"INPUT": function(a) {
 				if (!_w.isString(a)) { a = JSON.stringify(a); }
 				var type = w.dom(element).get(0).type;
-				if (_w.contains(["text", "password"], type)) {
+				if (_w.contains(["text", "password", "number", "date"], type)) {
 					w.dom(element).val(a || "");
 				}
 				if (_w.contains(["checkbox", "radio"], type)) {
